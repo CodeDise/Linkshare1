@@ -19,7 +19,7 @@ DB_NAME = os.environ.get("DB_NAME", "link")
 
 #Auto approve 
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()] # dont change anything 
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @codedise</b>")
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ • ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ • {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @codedise</b>")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
 # Default
@@ -43,12 +43,11 @@ ABOUT_TXT = """<b>›› ᴄᴏᴍᴍᴜɴɪᴛʏ: <a href='https://t.me/novadis
 ›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @diablovolfir</b></blockquote>""" # Bhosdiwalo agar developer me Yato ka username hataya to agli baar se koi repo public nhi krunga!!
 
 CHANNELS_TXT = """<b>›› ᴀɴɪᴍᴇ ᴄʜᴀɴɴᴇʟ: <a href='https://t.me/anime_Aodox'>ᴀɴɪᴍᴇ ᴀᴏᴅᴏx</a>
-
 <blockquote expandable>›› ᴍᴏᴠɪᴇs: <a href='https://t.me/movie_unity'>ᴍᴏᴠɪᴇ ᴜɴɪᴛʏ</a>
-›› ᴡᴇʙsᴇʀɪᴇs: <a href='https://t.me/webseries_unity'>ᴡᴇʙsᴇʀɪᴇs ᴜɴɪᴛʏ</a>
-›› ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs: <a href='https://t.me/Cultured_infinite'>ᴄᴜʟᴛᴜʀᴇᴅ ɪɴғɪɴɪᴛᴇ</a>
-›› ᴍᴀɴʜᴡᴀ ᴄʜᴀɴɴᴇʟ: <a href='https://t.me/pornhwa_infinite'>ᴘᴏʀɴʜᴡᴀ</a>
-›› ᴄᴏᴍᴍᴜɴɪᴛʏ: <a href='https://t.me/PlayDise'>ᴘʟᴀʏᴅɪsᴇ</a>
+›› ᴡᴇʙsᴇʀɪᴇs: <a href='https://t.me/webseries_unity'>ᴡᴇʙsᴇʀɪᴇs</a>
+›› ᴀᴅᴜʟᴛ ᴄʜᴀɴɴᴇʟs: <a href='https://t.me/Cultured_Aodox'>ᴄᴏʀɴʜᴜʙ</a>
+›› ᴍᴀɴʜᴡᴀ ᴄʜᴀɴɴᴇʟ: <a href='https://t.me/Pornhwa_infinite'>ᴘᴏʀɴʜᴡᴀ</a>
+›› ᴄᴏᴍᴍᴜɴɪᴛʏ: <a href='https://t.me/Novadise'>ɴᴏᴠᴀᴅɪsᴇ</a>
 ›› ᴅᴇᴠᴇʟᴏᴘᴇʀ: @Diablovolfir0</b></blockquote>""" # Bhosdiwalo agar developer me Yato ka username hataya to agli baar se koi repo public nhi krunga!!
 
 #--- ---- ---- --- --- --- - -- -  - - - - - - - - - - - --  - -
@@ -63,7 +62,7 @@ DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", "-1002910727461")) # C
 
 try:
     ADMINS = []
-    for x in (os.environ.get("ADMINS", "6888478102,7252834931,7813956229,5879656694").split()):
+    for x in (os.environ.get("ADMINS", "6888478102").split()):
         ADMINS.append(int(x))
 except ValueError:
     raise Exception("Your Admins list does not contain valid integers.")
